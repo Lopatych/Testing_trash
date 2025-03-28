@@ -89,7 +89,7 @@ def download_manga(message):
             # Скачиваем страницы
             for i, page in enumerate(data['images']['pages'], 1):
                 ext = {'j': 'jpg', 'p': 'png', 'g': 'gif'}.get(page['t'], 'jpg')
-                url = f"https://i.nhentai.net/galleries/{media_id}/{i}.{ext}"
+                url = f"https://nhentai.net/galleries/{media_id}/{i}.{ext}"
                 
                 img_data = requests.get(url, timeout=REQUEST_TIMEOUT)
                 img_data.raise_for_status()
